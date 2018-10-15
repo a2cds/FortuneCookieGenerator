@@ -7,12 +7,20 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class FortuneCookieBuilder {
-
-    private static final String NOT_DEFINED = "N/A";
+	
+	/*
+    PS: No need to declare these variables as not defined
+    
+	private static final String NOT_DEFINED = "N/A";
 
     private String client = NOT_DEFINED;
     private String company = NOT_DEFINED;
     private String quote = NOT_DEFINED;
+    */
+	
+    private String client;
+    private String company;
+    private String quote;
 
     FortuneCookieBuilder withClient(String client) {
         //if (this.client.equals(NOT_DEFINED))
